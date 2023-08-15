@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Poppins:wght@300&display=swap');
+:root{
+    font-family: 'Bricolage Grotesque', sans-serif;;
+    font-size: 1.2rem;
+    --dashboard-bg-color: #22c55e;
+    --dashboards-color:#000000;
+    --header-bg-color:#86efac;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.1fr 4fr;
+    grid-template-rows: repeat(5,1fr);
+}
+
+/* Sidebar styles */
+.sidebar{
+    background-color: var(--dashboard-bg-color);
+    box-shadow: 2px 2px 80px #000 ;
+    color: var(--dashboards-color);
+    grid-row: 1/-1;
+    display: grid;
+    grid-template-rows: 40px repeat(2,100px);
+    gap: 80px;
+}
+.logo{
+    display: flex;
+    justify-content: start;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 1.5rem 20px;
+    gap: 8px;
+}
+
+  .dashboard{
+      padding-left: 20px;
+  }
+
+ .dashboard  > div , .options > div {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+  
+}
+.dashboard > div , .options > div:hover{
+    cursor: pointer;
+}
+
+.options{
+    padding-left: 20px;
+}
+/* header styles */
+.header{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: var(--header-bg-color);
+    display: grid;
+    grid-template-rows: repeat(2,fr);
+}
+
+.header__row1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.header__row1 > div {
+    display: inherit;
+    align-items: center;
+}
+
+.header__row1 input[type="search"]{
+    appearance: none;
+    border-radius: 8px;
+    border: none;
+    width: 400px;
+    height: 20px;
+    padding: 0 4px;
+}
+.header__row1 input[type="search"]:focus{
+    outline: none;
+}
+
+.header__row2{
+    display: flex;
+    justify-content: space-between;
+}
+.header__row2 button[type="button"]{
+    height: 2rem;
+    
+}
+
+#user__image{
+    height: 2rem;
+    width: 2rem;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.user__image_xs{
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid black;
+    border-radius:60px;
+    overflow: hidden;
+}
+
+
+
+.main{
+    grid-column: 2 / 3;
+    grid-row: 2/-1;
+    background: #58abab;
+}
